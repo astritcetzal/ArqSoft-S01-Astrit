@@ -1,0 +1,12 @@
+﻿@model Catalogo.Models.Item
+
+<h1>@Model.Titulo</h1>
+
+<p><strong>Tipo de lanzamiento: </strong> @Model.tiposLanzamiento</p>
+<p><strong>Numero de canciones: </strong>@Model.numeroCanciones</p>
+<p><strong>Año: </strong>@Model.Ano</p>
+<p><strong>Descripción: </strong>@Model.Descripcion</p>
+
+<hr />
+<a asp-action="Index" class="link-cancelar">&larr; Volver al Catálogo</a>
+
