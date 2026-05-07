@@ -211,3 +211,153 @@ header {
     border-radius: 8px;
     color: var(--morado-oscuro);
 }
+
+/* =========================================
+   ESTILOS DE LA PÁGINA DE INICIO (HERO SECTION)
+   ========================================= */
+
+/* 1. Creamos la animación: va de estar transparente y abajo, a visible y arriba */
+@keyframes aparecerFlotando {
+    from {
+        opacity: 0;
+        transform: translateY(40px); /* Empieza 40 pixeles más abajo */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Termina en su posición original */
+    }
+}
+
+/* 2. El contenedor principal: centramos todo y le damos la animación */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh; /* Hace que el contenido ocupe al menos el 60% del alto de la pantalla, quitando esa sensación de vacío */
+    animation: aparecerFlotando 1.2s ease-out; /* Ejecuta la animación en 1.2 segundos */
+}
+
+/* 3. Estilo del título */
+.titulo-principal {
+    font-size: 4rem; /* Hacemos la letra enorme e imponente */
+    color: var(--morado-oscuro);
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5); /* Le da un ligero brillo */
+}
+
+/* 4. Estilo del subtítulo */
+.subtitulo {
+    font-size: 1.3rem;
+    color: var(--texto-oscuro);
+    margin-bottom: 40px;
+    max-width: 600px; /* Evita que el texto se estire de esquina a esquina */
+}
+
+/* 5. El Botón Principal (Call to Action) */
+.btn-explorar {
+    background-color: var(--morado);
+    color: white;
+    padding: 15px 40px; /* Un botón grande y fácil de presionar */
+    border-radius: 30px; /* Bordes muy redondeados tipo píldora */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(106, 27, 154, 0.4); /* Sombra difuminada */
+    transition: all 0.3s ease; /* Transición suave para el hover */
+}
+
+    /* Efecto al pasar el ratón por encima del botón */
+    .btn-explorar:hover {
+        background-color: var(--morado-oscuro);
+        color: white;
+        transform: scale(1.05); /* El botón crece un 5% */
+        box-shadow: 0 10px 20px rgba(106, 27, 154, 0.6);
+    }
+
+/* =========================================
+   NUEVOS ESTILOS PARA IMÁGENES Y CREATIVIDAD
+   ========================================= */
+
+/* --- Estilos para la Página de Inicio (Home) --- */
+
+.hero-imagen {
+    max-width: 600px; /* Tamaño máximo de la foto de BTS */
+    width: 100%; /* Se adapta en pantallas pequeñas */
+    height: auto;
+    border-radius: 20px; /* Esquinas redondeadas */
+    box-shadow: 0 10px 30px rgba(106, 27, 154, 0.3); /* Sombra suave morada */
+    margin-bottom: 30px; /* Separación del título */
+    /* Mantenemos la animación que ya tenías en .hero-section, 
+       o se la aplicamos directamente a la imagen si prefieres */
+}
+
+/* Ajuste sutil al título para que no compita con la imagen */
+.titulo-principal {
+    font-size: 3.5rem; /* Un poco más pequeño que antes */
+    margin-top: 0;
+}
+
+
+/* --- Estilos para el Catálogo (Index) --- */
+
+/* Contenedor del header para alinear título y botón */
+.header-catalogo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Para móviles */
+    gap: 15px;
+}
+
+/* Rediseño de la tarjeta para acomodar imagen arriba y texto abajo */
+.tarjeta-album {
+    display: flex;
+    flex-direction: column; /* Apila imagen sobre texto */
+    padding: 0; /* Quitamos padding para que la imagen toque los bordes superiores */
+    overflow: hidden; /* Necesario para redondear las esquinas de la imagen interior */
+    border-left: none; /* Quitamos el borde izquierdo anterior */
+    border-bottom: 6px solid var(--morado); /* detalle de color abajo, estilo tech/kpop */
+}
+
+/* Contenedor de la portada del álbum */
+.contenedor-cover {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Hace el contenedor perfectamente cuadrado */
+    overflow: hidden;
+}
+
+/* La imagen de la portada */
+.capa-album {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    transition: transform 0.5s ease; /* Prepara animación de zoom */
+}
+
+/* Efecto zoom al pasar el ratón por la tarjeta */
+.tarjeta-album:hover .capa-album {
+    transform: scale(1.1); /* Zoom del 10% a la imagen */
+}
+
+/* Contenedor para el texto dentro de la tarjeta */
+.tarjeta-contenido {
+    padding: 20px; /* Espacio interior para el texto */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Ocupa el espacio restante */
+}
+
+.tarjeta-album h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* Ajuste de la info info */
+.tarjeta-info {
+    margin-top: auto; /* Empuja la info hacia abajo */
+    font-size: 0.8rem;
+}
