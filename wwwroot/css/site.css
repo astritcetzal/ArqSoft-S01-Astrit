@@ -18,7 +18,7 @@ html {
 
 @media (min-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -56,11 +56,8 @@ h1 {
 
 header {
     background-color: white;
-    padding: 40px 70px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 15px var(--morado-claro);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -328,6 +325,7 @@ header {
     width: 100%;
     aspect-ratio: 1 / 1; /* Hace el contenedor perfectamente cuadrado */
     overflow: hidden;
+
 }
 
 /* La imagen de la portada */
@@ -336,6 +334,7 @@ header {
     height: 100%;
     object-fit: cover; /* Ajusta la imagen sin deformarla */
     transition: transform 0.5s ease; /* Prepara animación de zoom */
+
 }
 
 /* Efecto zoom al pasar el ratón por la tarjeta */
@@ -354,10 +353,119 @@ header {
 .tarjeta-album h3 {
     margin-bottom: 10px;
     font-size: 1.2rem;
+
 }
 
 /* Ajuste de la info info */
 .tarjeta-info {
     margin-top: auto; /* Empuja la info hacia abajo */
     font-size: 0.8rem;
+
 }
+
+/* Estilo para el video local en bucle */
+.hero-video-local {
+    width: 100%;
+    max-width: 750px; /* Ancho máximo para que no ocupe toda la pantalla en monitores grandes */
+    border-radius: 20px; /* Las esquinas redondeadas */
+    box-shadow: 0 12px 35px rgba(106, 27, 154, 0.4); /* La sombra morada profunda */
+    margin-bottom: 30px; /* Espacio antes del título */
+    object-fit: cover; /* Garantiza que el video no se estire ni se deforme */
+}
+
+.detalle-total {
+    background-color: #F3E5F5;
+    font-size: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding:6px;
+    margin: 0 auto 20px auto;
+    max-width: 800px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    border: 1.5px solid #ef9de4;
+    box-shadow: 0 4px 15px rgba(142, 229, 204, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detalle-total:hover {
+    transform: translateY(-5px); /* Pequeño salto al pasar el mouse */
+    box-shadow: 0 12px 25px rgba(142, 229, 204, 0.8);
+}
+
+.detalle-titulo {
+    background-color: #dba6f7;
+    border-radius: 10px;
+    font-size:10px;
+    overflow: hidden;
+    padding: 3px;
+    margin: 0 auto 20px auto;
+    max-width: 800px;
+    text-align: center;
+    border: 1.5px solid #ef9de4;
+}
+
+/* =========================================
+   AJUSTE UNIFORME DE IMÁGENES DE CANCIONES
+   ========================================= */
+
+/* 1. Contenedor principal de la sección */
+.bloque-canciones {
+    margin-top: 30px;
+    text-align: center; /* Centra el título */
+    width: 100%; /* Ocupa todo el ancho de la tarjeta blanca */
+
+}
+
+.titulo-seccion {
+    color: var(--morado);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    background-color: #dba6f7;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 3px;
+    margin: 0 auto 20px auto;
+    max-width: 800px;
+    text-align: center;
+    border: 1.5px solid #ef9de4;
+}
+
+/* 2. El MARCO UNIFORME - Esta es la clave */
+.contenedor-canciones-uniforme {
+    /* Fondo morado muy claro, sutil, para que se vea el marco si la imagen no lo llena */
+    background-color: var(--morado-claro);
+    border-radius: 12px;
+    /* Definimos el tamaño del marco uniforme */
+    width: 80%; /* Ancho relativo a la tarjeta blanca, para centrarla */
+    max-width: 800px; /* Ancho máximo para que no se vea enorme */
+    margin: 0 auto; /* Centrado horizontal automático */
+    /* Definimos la PROPORCIÓN del marco (ancho:alto).
+       Una proporción vertical (2:3) es ideal para tracklists largos */
+    aspect-ratio: 16 / 9;
+    overflow: hidden; /* Corta cualquier desborde (aunque object-fit lo evita) */
+    box-shadow: inset 0 0 10px rgba(106, 27, 154, 0.2); /* Sombrita suave interna */
+    /* Centrado Flexbox: Centra la imagen DENTRO del marco */
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    padding: 10px; /* Un poco de espacio interno */
+}
+
+/* 3. La imagen AJUSTADA - Dentro del marco */
+.imagen-canciones-ajustada {
+    /* La imagen debe intentar ocupar el marco */
+    max-width: 100%;
+    max-height: 100%;
+    width: auto; /* Mantiene proporción original */
+    height: auto; /* Mantiene proporción original */
+    /* LA PROPIEDAD MÁGICA: object-fit: contain */
+    /* Dice: "Escala la imagen para que CABE completamente dentro del contenedor, 
+       sin cortarse ni estirarse, y mantén su proporción". */
+    object-fit: contain;
+    /* Centra la imagen si el object-fit deja espacios */
+    object-position: center;
+    display: block;
+}
+
+   

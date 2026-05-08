@@ -38,7 +38,7 @@ namespace Catalogo.Controllers
 
             {
                 Id = 4,
-                Titulo = "Skool luv Affair",
+                Titulo = "Love Yourself Tear",
                 tiposLanzamiento = "Álbum de estudio",
                 Ano = 2018,
                 numeroCanciones = 11,
