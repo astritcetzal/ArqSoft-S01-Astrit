@@ -48,7 +48,7 @@ namespace Catalogo.Controllers
             new Item
             {
                 Id = 5,
-                Titulo = "Map od the Soul: 7",
+                Titulo = "Map of the Soul: 7",
                 tiposLanzamiento = "Álbum de estudio",
                 Ano = 2020,
                 numeroCanciones = 19,
