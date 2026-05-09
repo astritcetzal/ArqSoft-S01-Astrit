@@ -55,12 +55,23 @@ h1 {
 }
 
 header {
-    background-color: white;
-    justify-content: space-between;
-    align-items: center;
     position: sticky;
     top: 0;
     z-index: 100;
+}
+
+.mi-menu-morado {
+    background-color: var(--morado-claro);
+    box-shadow: 0 4px 15px var(--morado-oscuro) !important;
+}
+
+.navbar-dark navbar-brand, .navbar-dark nav-link {
+    color: white !important;
+    font-weight: bold;
+}
+
+.navbar-dark .nav-link:hover {
+    color: var(--lila-pastel) !important;
 }
 
 .btn-agregar-album {
@@ -392,6 +403,32 @@ header {
     transform: translateY(-5px); /* Pequeño salto al pasar el mouse */
     box-shadow: 0 12px 25px rgba(142, 229, 204, 0.8);
 }
+.detalle-texto {
+    padding: 20px 30px; /* Da un respiro al texto alejándolo de los bordes */
+    color: var(--texto-oscuro);
+    font-size: 1.1rem; /* Letra un poco más grande y cómoda de leer */
+    line-height: 1.8; /* Aumenta el espacio entre las líneas */
+}
+
+    /* Estilo para cada línea de información (los párrafos) */
+    .detalle-texto p {
+        margin-bottom: 15px; /* Separación entre un dato y otro */
+        border-bottom: 1px solid rgba(106, 27, 154, 0.1); /* Una línea morada súper sutil y elegante de separación */
+        padding-bottom: 10px;
+    }
+
+        /* Le quitamos la línea divisoria al último párrafo (la descripción) para que se vea limpio */
+        .detalle-texto p:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+    /* Hacemos que los títulos (lo que está en negritas) resalten con el color de BTS */
+    .detalle-texto strong {
+        color: var(--morado-oscuro);
+        font-weight: 700;
+        margin-right: 8px; /* Un pequeño espacio extra después de los dos puntos */
+    }
 
 .detalle-titulo {
     background-color: #dba6f7;
@@ -426,7 +463,7 @@ header {
     overflow: hidden;
     padding: 3px;
     margin: 0 auto 20px auto;
-    max-width: 800px;
+    max-width: 400px;
     text-align: center;
     border: 1.5px solid #ef9de4;
 }

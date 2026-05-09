@@ -1,6 +1,32 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Política de Privacidad";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Pagina de privacidad</p>
+<div class="contenedor-principal" style="background-color: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 15px; max-width: 800px; margin: 40px auto; box-shadow: 0 10px 25px rgba(106, 27, 154, 0.2);">
+    
+    <h1 style="color: var(--morado-oscuro); margin-bottom: 20px;">@ViewData["Title"]</h1>
+
+    <p><strong>Última actualización:</strong> Mayo de 2026</p>
+
+    <p>Bienvenido/a al Catálogo de Álbumes. La protección de tus datos y tu privacidad son fundamentales para el funcionamiento de este sistema. A continuación, se detalla el manejo de la información dentro de la aplicación.</p>
+
+    <h3 style="color: var(--morado); margin-top: 30px;">1. Naturaleza del Proyecto</h3>
+    <p>Esta aplicación web ha sido desarrollada con fines estrictamente académicos como parte de un programa de formación profesional en Desarrollo de Software. No tiene fines comerciales ni de lucro.</p>
+
+    <h3 style="color: var(--morado); margin-top: 30px;">2. Recopilación y Uso de Datos</h3>
+    <p>Al utilizar la función de <strong>"Agregar álbum"</strong>, el sistema procesa temporalmente la siguiente información proporcionada por el usuario:</p>
+    <ul>
+        <li>Títulos, descripciones y datos numéricos referentes a los elementos del catálogo.</li>
+        <li>Archivos multimedia (imágenes de portadas y las listas de canciones) cargados a través de los formularios.</li>
+    </ul>
+
+    <h3 style="color: var(--morado); margin-top: 30px;">3. Almacenamiento en Memoria Volátil (Caché)</h3>
+    <p>Actualmente, el sistema opera sin una conexión a una base de datos persistente. Toda la información ingresada por el usuario (incluyendo la conversión de imágenes) se procesa de manera segura y se almacena exclusivamente en la <strong>memoria volátil (RAM)</strong> del servidor durante la sesión activa.</p>
+    <p>Una vez que la aplicación se reinicia o el servidor se detiene, todos los datos ingresados son eliminados de forma permanente. Ningún archivo personal o imagen se guarda físicamente en el disco duro del sistema.</p>
+
+    <h3 style="color: var(--morado); margin-top: 30px;">4. Compartición de Información</h3>
+    <p>Los datos procesados por este catálogo no se comparten, venden, ni transfieren a terceros, empresas, ni servicios de análisis web.</p>
+
+    <h3 style="color: var(--morado); margin-top: 30px;">5. Cambios a esta Política</h3>
+    <p>Dado que esta aplicación se encuentra en constante iteración y desarrollo, esta política de privacidad puede actualizarse en el futuro para reflejar nuevas funcionalidades, como la eventual integración de bases de datos relacionales persistentes.</p>
+</div>

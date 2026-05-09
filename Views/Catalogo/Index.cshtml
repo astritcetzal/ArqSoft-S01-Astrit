@@ -21,7 +21,16 @@
         {
             <a asp-action="Detalle" asp-route-id="@item.Id" class="tarjeta-album">
                 <div class="contenedor-cover">
-                    <img src="~/images/album-@(@item.Id).jpg" alt="Portada @item.Titulo" class="capa-album" />
+                    @if (!string.IsNullOrEmpty(item.ImagenBase64))
+                    {
+                        <!-- Si la imagen viene de la memoria RAM (Base64), la mostramos así -->
+                        <img src="data:@item.TipoImagen;base64,@item.ImagenBase64" alt="Portada @item.Titulo" class="capa-album" />
+                    }
+                    else
+                    {
+                        <!-- Si no tiene imagen en RAM, mostramos las que guardaste a mano (Skool Luv Affair, Wings, etc.) -->
+                        <img src="~/images/album-@(@item.Id).jpg" alt="Portada @item.Titulo" class="capa-album" />
+                    }
                 </div>
 
                 <div class="tarjeta-contenido">

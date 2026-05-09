@@ -51,7 +51,7 @@ namespace Catalogo.Controllers
                 Titulo = "Map od the Soul: 7",
                 tiposLanzamiento = "Álbum de estudio",
                 Ano = 2020,
-                numeroCanciones = 20,
+                numeroCanciones = 19,
                 Descripcion = "Una celebración masiva de sus 7 años de carrera, resumiendo todas las eras anteriores."
             }
 
@@ -79,7 +79,40 @@ namespace Catalogo.Controllers
         [HttpPost]
         public IActionResult Agregar(Item item)
         {
-            item.Id = _items.Count + 1;
+            item.Id = _items.Count > 0 ? _items.Max(i => i.Id) + 1 : 1;
+            // 3. LÓGICA DE IMAGEN EN MEMORIA (Sin guardar archivos)
+            if (item.ArchivoPortada != null && item.ArchivoPortada.Length > 0)
+            { 
+                item.TipoImagen = item.ArchivoPortada.ContentType;
+
+            using (var memoryStream = new MemoryStream())
+            
+                    
+                    {
+                        // Copiamos la foto a la memoria temporal
+                        item.ArchivoPortada.CopyTo(memoryStream);
+
+                        // Convertimos la foto a un arreglo de bytes
+                        byte[] bytesImagen = memoryStream.ToArray();
+
+                        // Convertimos los bytes a texto y lo guardamos en nuestro objeto
+                        item.ImagenBase64 = Convert.ToBase64String(bytesImagen);
+                    }
+                }
+
+
+            if (item.ArchivoCanciones != null && item.ArchivoCanciones.Length > 0)
+            {
+                item.TipoCanciones = item.ArchivoCanciones.ContentType;
+
+                using (var memoryStreamTracklist = new MemoryStream())
+                {
+                    item.ArchivoCanciones.CopyTo(memoryStreamTracklist);
+                    byte[] bytesTracklist = memoryStreamTracklist.ToArray();
+                    item.CancionesListaBase64 = Convert.ToBase64String(bytesTracklist);
+                }
+            }
+
             _items.Add(item);
             return RedirectToAction("Index");
 

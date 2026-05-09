@@ -1,7 +1,7 @@
 ﻿@model Catalogo.Models.Item
 <div class= "contenedos-formulario">
 <h1>Agregar álbum</h1>
-<form asp-action="Agregar" method="post">
+    <form asp-action="Agregar" method="post" enctype="multipart/form-data">
         <div class="grupo-input">
         <label>Titulo</label>
         <input asp-for="Titulo"/>
@@ -22,7 +22,16 @@
         <label>Descripción</label>
         <textarea asp-for="Descripcion" > </textarea>
     </div>
-
+        <div class="grupo-input">
+            <label>Imagen de Portada (Opcional)</label>
+            <!-- type="file" hace que aparezca el botón de "Examinar..." -->
+            <!-- accept="image/*" limita a que el usuario solo pueda elegir fotos -->
+            <input asp-for="ArchivoPortada" type="file" accept="image/*" />
+        </div>
+        <div class="grupo-input">
+            <label>Imagen de la lista de canciones (Opcional)</label>
+            <input asp-for="ArchivoCanciones" type="file" accept="image/*" />
+        </div>
     <button type="submit" class="btn-guardar">Guardar álbum</button>
 
 </form>

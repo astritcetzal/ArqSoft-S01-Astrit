@@ -4,7 +4,7 @@
     <h1>@Model.Titulo</h1>
 </div>
 <div class="detalle-total">
-    <div class"detalle-texto">
+    <div class= "detalle-texto">
     <p><strong>Tipo de lanzamiento: </strong> @Model.tiposLanzamiento</p>
 
     <p><strong>Numero de canciones: </strong>@Model.numeroCanciones</p>
@@ -12,15 +12,23 @@
     <p><strong>Año: </strong>@Model.Ano</p>
 
     <p><strong>Descripción: </strong>@Model.Descripcion</p>
+
     </div>
 
     
-</div>
-<div class="bloque-canciones">
+
     <h2 class="titulo-seccion">Canciones</h2>
     
     <div class="contenedor-canciones-uniforme">
-        <img src="~/images/canciones-@(@Model.Id).png" alt="Lista de canciones" class="imagen-canciones-ajustada" />
+        @if (!string.IsNullOrEmpty(Model.CancionesListaBase64)) {
+            <img src="data:@@Model.TipoCanciones; base64, @Model.CancionesListaBase64" alt="Lista de canciones" class="imagen-canciones-ajustada" />
+
+        }
+        else
+        {
+            <img src="~/images/canciones-@(@Model.Id).png" alt="Lista de canciones" class="imagen-canciones-ajustada" />
+        }
+
     </div>
 
 </div>
