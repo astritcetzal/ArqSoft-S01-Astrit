@@ -39,7 +39,7 @@ Este proyecto fue desarrollado bajo la arquitectura **MVC** utilizando el siguie
 
 **Catálogo y Filtros**
 ![Vista general del catálogo en Grid](docs/catalogo.png)
-![Vista general del filtro en Grid](docs/filtro.png)
+![Vista general del filtro en Grid](docs/filtros.png)
 
 **Vista de Detalles de un Álbum**
 ![Detalles del álbum y lista de canciones](docs/vista.png)
