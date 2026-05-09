@@ -1,11 +1,14 @@
 # Tecnológico de Software
-## Materia: Fundamentos de álgebra
-## 11/11/2025
-## Alumno: Astrit Airan Cetzal Cetzal
+## Materia: Arquitectura de software
+- **Nombre:** Astrit Airan Cetzal Cetzal
+- **Grupo:** A
+- **Cuatrimestre:** Tercer Cuatrimestre
+- **Carrera:** TSU en Desarrollo e Innovación de Software
+- **Profesor:** Jorge Javier Pedrozo Romero
 
-# 💜 Catálogo de Álbumes de Bangtan (BTS)
+# 💜 Catálogo de Álbumes de BTS
 
-Un sistema web desarrollado para gestionar y visualizar una colección musical. Este proyecto fue creado como práctica académica para la materia de Desarrollo de Software, aplicando los fundamentos de la arquitectura Modelo-Vista-Controlador (MVC).
+Un sistema web desarrollado para gestionar y visualizar una colección musical. Este proyecto fue creado como práctica académica para la materia de Arquitectura de software, aplicando los fundamentos de la arquitectura Modelo-Vista-Controlador (MVC).
 
 ## 📝 Descripción del Proyecto
 
@@ -31,8 +34,6 @@ Este proyecto fue desarrollado bajo la arquitectura **MVC** utilizando el siguie
 
 ## 📸 Capturas de Pantalla
 
-*(Nota para ti, Astrit: Toma capturas de pantalla de tu proyecto corriendo. Guárdalas en una carpeta llamada `docs` o `imagenes-readme` dentro de tu proyecto. Luego, reemplaza las rutas entre los paréntesis de abajo con el nombre real de tus fotos).*
-
 **Página Principal (Inicio)**
 ![Página de inicio](docs/inicio.png)
 
@@ -56,11 +57,6 @@ Para el desarrollo de este proyecto declaro que utilicé asistencia de modelos d
 * **Refactorización:** Orientación sobre mejores prácticas para el manejo de carga de archivos (conversión a Base64 en memoria) adaptadas al nivel de la asignatura.
 El diseño lógico, la estructura de la aplicación y la validación final del código fueron realizados por mi.
 
-## 📄 Derechos de Autor (Copyright)
-
-Copyright (c) 2026 Astrit. Todos los derechos reservados.
-
-Este proyecto y su código fuente fueron desarrollados de manera individual con fines académicos. No se autoriza la copia, reproducción, distribución, modificación o reutilización total ni parcial de este código sin el consentimiento expreso y por escrito de la autora.
 
 ## 🤝 Agradecimientos
 
@@ -72,6 +68,14 @@ Este proyecto y su código fuente fueron desarrollados de manera individual con 
 
 - **Email Institucional:** [astrit.cetzal@tecdesoftware.edu.mx]
 - **GitHub:** [astritcetzal](https://github.com/astritcetzal)
+---
+
+## 📄 Derechos de Autor (Copyright)
+
+Copyright (c) 2026 Astrit. Todos los derechos reservados.
+
+Este proyecto y su código fuente fueron desarrollados de manera individual con fines académicos. No se autoriza la copia, reproducción, distribución, modificación o reutilización total ni parcial de este código sin el consentimiento expreso y por escrito de la autora.
+
 
 ---
 <div align="center">
